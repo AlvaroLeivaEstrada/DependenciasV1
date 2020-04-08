@@ -1,0 +1,17 @@
+com/mycompany/dependencyproyect1/dao/repository/DiscoRepository.class
+com/mycompany/dependencyproyect1/dao/repository/TipoDocumentoRepository.class
+com/mycompany/dependencyproyect1/dao/entity/TipoFormato.class
+com/mycompany/dependencyproyect1/dao/repository/TipoDiscoRepository.class
+com/mycompany/dependencyproyect1/dao/entity/Directorio.class
+com/mycompany/dependencyproyect1/dao/repository/DocumentoRepository.class
+com/mycompany/dependencyproyect1/dao/entity/TipoDocumento.class
+com/mycompany/dependencyproyect1/dao/entity/Programa.class
+com/mycompany/dependencyproyect1/dao/repository/DirectorioRepository.class
+com/mycompany/dependencyproyect1/dao/entity/Disco.class
+com/mycompany/dependencyproyect1/dao/entity/Asignatura.class
+com/mycompany/dependencyproyect1/dao/repository/TipoFormatoRepository.class
+com/mycompany/dependencyproyect1/dao/entity/TipoDisco.class
+com/mycompany/dependencyproyect1/dao/entity/Documento.class
+com/mycompany/dependencyproyect1/dao/repository/AsignaturaRespository.class
+com/mycompany/dependencyproyect1/dao/repository/DataBaseHandler.class
+com/mycompany/dependencyproyect1/dao/repository/ProgramaRepository.class
