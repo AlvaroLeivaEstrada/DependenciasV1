@@ -74,4 +74,17 @@ public class TipoDocumentoRepository extends DataBaseHandler {
         }
         return null;
     }
+
+    
+      public int getIdByNameTipoDocumento(List<TipoDocumento> tipoDocumentoList, String nombre) {
+        int id = -1;
+
+        for (TipoDocumento tipoDocumento : tipoDocumentoList) {
+            
+            if (tipoDocumento.getNombre().equals(nombre)) {
+                id = tipoDocumento.getIdTIPODOCUMENTO();
+            }
+            
+        }
+        return id;}
 }

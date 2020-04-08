@@ -82,5 +82,18 @@ public class ProgramaRepository extends DataBaseHandler {
         return null;
 
     }
+       public int getIdByNamePrograma(List<Programa> programaList, String nombre) {
+        int id = -1;
+
+        for (Programa programa : programaList) {
+            
+            if (programa.getNombre().equals(nombre)) {
+                id = programa.getIdPROGRAMA();
+            }
+            
+        }
+        return id;
+    }
+    
 
 }

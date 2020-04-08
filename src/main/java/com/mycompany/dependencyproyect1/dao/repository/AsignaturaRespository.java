@@ -90,4 +90,16 @@ public class AsignaturaRespository extends DataBaseHandler {
         return null;
 
     }
+     public int getIdByNameAsignatura(List<Asignatura> asignaturaList, String nombre) {
+        int id = -1;
+
+        for (Asignatura asignatura : asignaturaList) {
+            
+            if (asignatura.getNombre().equals(nombre)) {
+                id = asignatura.getIdASIGNATURA();
+            }
+            
+        }
+        return id;
+    }
 }

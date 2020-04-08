@@ -19,9 +19,35 @@ import java.util.List;
  * @author fercholeiva
  */
 public class DocumentoRepository extends DataBaseHandler {
+    
+    public int save(int Disco, int Directorio,int tipoDocumento,int programa, int asignatura , String nombre, String creacion,String modificaion,String comentario, String bytes) {
+        try {
+            Connection conn = this.getConnection();
+            Statement stmt = conn.createStatement();
+
+            String insert = ""
+                    + "INSERT INTO `solucion_ejercicio_1`.`DOCUMENTO` (`DISCO_idDISCO`,"
+                    +"`DIRECTORIO_idDIRECTORIO`,`TIPO_DOCUMENTO_idTIPO_DOCUMENTO`,`PROGRAMA_idPROGRAMA`,"
+                    +"`ASIGNATURA_idASIGNATURA`,`Nombre`,`Fecha_creacion`,`Fecha_modificacion`, `Comentario`,`Tamaño_bytes`) "
+                    + "VALUES ( '" + Disco + "','" + Directorio + "','" + tipoDocumento + "', '" + programa + "','"+asignatura+"','"+nombre+"','"+creacion+"','"+modificaion+"','"+comentario+"','"+ bytes+"');";
+            PreparedStatement ps = conn.prepareStatement(insert, Statement.RETURN_GENERATED_KEYS);
+            ps.executeUpdate();
+            ResultSet rs = ps.getGeneratedKeys();
+            int id = -1;
+            if (rs.next()) {
+                id = rs.getInt(1);
+            }
+            conn.close();
+            return id;
+        } catch (Exception e) {
+            System.out.println(e);
+            return -1;
+        }
+
+    }
 
     //public int save(int Disco, int Directorio, int tipoDocumento, int programa, int asignatura, String nombre, String creacion, String modificaion, String comentario, String bytes) {
-    public Documento save(Documento documento) {
+    /*public Documento save(Documento documento) {
       
     try {
             Connection conn = this.getConnection();
@@ -88,7 +114,7 @@ public class DocumentoRepository extends DataBaseHandler {
             System.out.println(e);
         }
         return documentos;
-    }
+    }*/
     
     public List<Documento> findByName(String name) {
         List<Documento> documentos = new ArrayList<>();

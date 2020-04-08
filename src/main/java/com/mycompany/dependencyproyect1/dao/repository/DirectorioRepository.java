@@ -77,5 +77,19 @@ public class DirectorioRepository extends DataBaseHandler{
         return null;
        
     }
+      public int getIdByNameDirectorio(List<Directorio> directorioList, String nombre) {
+        int id = -1;
+
+        for (Directorio directorio : directorioList) {
+            
+            if (directorio.getNombre().equals(nombre)) {
+                id = directorio.getIdDIRECTORIO();
+            }
+            
+        }
+        return id;
+    }
+
+   
     
 }
