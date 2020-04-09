@@ -21,6 +21,7 @@ import java.util.List;
 public class DirectorioRepository extends DataBaseHandler{
     public boolean save(String nombre) {
         try {
+           
             Connection conn = this.getConnection();
             Statement stmt = conn.createStatement();
             boolean result = stmt.execute("INSERT INTO `DIRECTORIO`(`nombre`) VALUES ('" + nombre + "');");

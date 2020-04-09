@@ -18,7 +18,7 @@ public class DataBaseHandler {
 
         System.out.println("esto  se conecta a base de datos");
         Connection conn = null;
-        String sURL = "jdbc:mysql://localhost:3306/solucion_ejercicio_1";
+        String sURL = "jdbc:mysql://localhost:3306/solucion_ejercicio_1?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         conn = DriverManager.getConnection(sURL, "root", "soymillonario512");
         return conn;
     }
